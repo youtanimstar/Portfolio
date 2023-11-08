@@ -1,0 +1,34 @@
+.Typewriter__wrapper {
+  color: var(--gray);
+  /* margin-left: 25px; */
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+}
+.Typewriter__cursor {
+  color: var(--gray);
+  /* margin-left: 0px; */
+  font-size: 30px;
+  font-weight: 800;
+}
+.Typewriter{
+    /* background-color: red; */
+    margin-top: 15px;
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.78);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--gray);
+}

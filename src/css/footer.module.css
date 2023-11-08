@@ -1,0 +1,16 @@
+/* ========= section gap ========= */
+.footerPage{
+    margin-top: 70px;
+}
+
+.footerPage{
+    background-color: var(--white);
+    /* height: 50px; */
+    padding: 20px;
+    width: 100%;
+    border-top: 2px solid var(--black);
+    color: var(--black);
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
