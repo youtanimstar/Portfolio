@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import Style from "../css/about.module.css";
 import { MdOutlineWork } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
-const About = ({navRef}) => {
+const About = () => {
     
   return (
     <>
-      <section className={Style.About} ref={navRef}>
+      <section className={Style.About} id="about">
         <div className={Style.top}>
           <div className={Style.subTitle}>Get To Know More</div>
           <div className={Style.title}>About Me</div>

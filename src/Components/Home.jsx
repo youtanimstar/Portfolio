@@ -4,6 +4,7 @@ import Style from "../css/home.module.css";
 import Button from "../css/button.module.css";
 import {RiContactsLine} from "react-icons/ri"
 import {IoMdDownload} from "react-icons/io"
+import {HashLink as Link} from "react-router-hash-link"
 const Home = () => {
   return (
     <>
@@ -23,8 +24,8 @@ const Home = () => {
             className={Style.typewriter}
           />
           <div className={Style.buttonSection}>
-            <button className={Button.button}>Download CV<IoMdDownload className={Button.icon}/></button>
-            <button className={Button.button} >Contact Me<RiContactsLine className={Button.icon}/></button>
+            <button className={`${Button.button} ${Button.special}`}>Download CV<IoMdDownload className={Button.icon}/></button>
+            <Link className={`${Button.button}`} to="#contact">Contact Me<RiContactsLine className={Button.icon}/></Link>
           </div>
         </div>
       </section>

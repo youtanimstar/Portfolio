@@ -1,39 +1,43 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "./Components/Navbar";
-import Style from "./css/style.module.css"
+import Style from "./css/style.module.css";
 import Home from "./Components/Home";
 import Theme from "./Components/Theme";
-import "./css/global.css"
+import "./css/global.css";
 import About from "./Components/About";
 import Experience from "./Components/Experience/Experience";
 import Projects from "./Components/Projects/Projects";
-import Contact from "./Components/Contact"
+import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Socials from "./Components/Socials";
+// import { Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
+
 
 const App = () => {
-  // let prevTheme = localStorage.getItem('theme');
-  const [theme, setTheme] = useState(false);
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-  const navRef = useRef();
-  const handleRef = ()=>{
-    navRef.current.scrollIntoView();
-  }
+  const [theme, setTheme] = useState(true);
+
   return (
     <>
-      <div className={Style.container} datatheme={`${theme?"dark":"light"}`}>
-        <Navbar handleRef={handleRef}/>
-        <Home navRef={navRef}/>
-        <About navRef={navRef}/>
-        <Experience navRef={navRef}/>
-        <Projects/>
-        <Contact/>
-        <Footer/>
-        <Theme setTheme={setTheme} theme={theme}/>
-        <Socials/>
+    <BrowserRouter>
+      <div
+        className={Style.container}
+        datatheme={`${theme ? "dark" : "light"}`}
+      >
+        {/* <Router> */}
+          <Navbar />
+          <Home/>
+          <About/>
+          <Experience/>
+          <Projects/>
+          <Contact/>
+          <Footer />
+          <Theme setTheme={setTheme} theme={theme} />
+          <Socials />
+        {/* </Router> */}
       </div>
+      </BrowserRouter>
     </>
   );
 };

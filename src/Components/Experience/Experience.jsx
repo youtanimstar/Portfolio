@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Style from "../../css/experience.module.css";
 import Language from "./Language";
 
@@ -43,7 +43,7 @@ const Experience = ({navRef}) => {
   ];
   return (
     <>
-      <section className={Style.experience} ref={navRef}>
+      <section className={Style.experience} id="experience">
         <h2 className={Style.subTitle}>Explore My</h2>
         <h1 className={Style.title}>Experience</h1>
         <div className={Style.experienceCard}>

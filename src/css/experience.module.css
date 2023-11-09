@@ -25,6 +25,9 @@
     font-weight: 800;
     letter-spacing: 2px;
 }
+[datatheme="dark"] .title{
+    color: var(--yellow);
+}
 .experienceCard{
     background-color: var(--white);
     width: 90%;

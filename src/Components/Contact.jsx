@@ -7,7 +7,7 @@ import { PiPaperPlaneRightFill } from "react-icons/pi";
 const Contact = () => {
   return (
     <>
-      <section className={Style.contactPage}>
+      <section className={Style.contactPage} id="contact">
         <div className={Style.subTitle}>Get in Touch</div>
         <div className={Style.title}>Contact Me</div>
         <div className={Style.contactSection}>

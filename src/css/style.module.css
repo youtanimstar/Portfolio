@@ -30,6 +30,7 @@ html {
   --black: #000000;
   --gray: #5a5a5a;
   --gray-shadow: #00000017;
+  --yellow: #FABC58;
 }
 [datatheme="dark"]{
   --white: #000000;

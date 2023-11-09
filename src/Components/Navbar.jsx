@@ -1,34 +1,37 @@
 import React from "react";
 import Style from "../css/navbar.module.css";
-const Navbar = ({handleRef}) => {
+// import { Link } from 'react-router-dom';
+import {HashLink as Link} from "react-router-hash-link"
+const Navbar = () => {
   return (
     <nav className={Style.nav}>
       <div className={Style.logo}>Deep Das</div>
-      {/* <div> */}
       <ul className={Style.navLinks}>
-        <li onClick={handleRef}>
-          <a href="#about" className={Style.navItems}>
+        <li>
+          
+          <Link to="#about" className={Style.navItems}>
             About
-          </a>
+          </Link>
         </li>
-        <li onClick={handleRef}>
-          <a href="#experience" className={Style.navItems}>
+        <li >
+          <Link to="#experience" className={Style.navItems}>
             Experience
-          </a>
+          </Link>
+          
         </li>
-        <li onClick={handleRef} >
-          <a href="#projects" className={Style.navItems}>
+        <li  >
+          <Link to="#projects" className={Style.navItems}>
             Projects
-          </a>
+          </Link>
+          
         </li>
-        <li onClick={handleRef} >
-          <a href="#contact" className={Style.navItems}>
+        <li  >
+          <Link to="#contact" className={Style.navItems}>
             Contact
-          </a>
+          </Link>
+          
         </li>
       </ul>
-      
-      {/* </div> */}
     </nav>
   );
 };

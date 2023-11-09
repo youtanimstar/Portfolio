@@ -13,7 +13,7 @@ const ProjectCard = () => {
         <button className={Button.button}>
           Github <AiOutlineGithub className={Button.icon} />
         </button>
-        <button className={Button.button}>
+        <button className={`${Button.button} ${Button.special}`}>
           Demo <FiExternalLink className={Button.icon} />
         </button>
       </div>

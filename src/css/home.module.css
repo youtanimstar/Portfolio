@@ -39,6 +39,9 @@
     letter-spacing: 2px;
     /* background-color: red; */
 }
+[datatheme="dark"] .right .title{
+    color: var(--yellow);
+}
 
 .buttonSection{
     display: flex;

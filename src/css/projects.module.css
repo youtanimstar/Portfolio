@@ -24,6 +24,10 @@
     letter-spacing: 2px;
 }
 
+[datatheme="dark"] .title{
+    color: var(--yellow);
+}
+
 .projectSection{
     /* background-color: red; */
     width: 100%;
