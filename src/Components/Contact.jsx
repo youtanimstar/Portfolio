@@ -22,7 +22,7 @@ const Contact = () => {
             </div>
             <div className={Style.card}>
               <PiPhoneCallFill className={Style.cardIcon} />
-              <h2 className={Style.cardTitle}>Call Me</h2>
+              <h2 className={Style.cardTitle}>Whatsapp Me</h2>
               <p className={Style.cardDescription}>
                 +91 8697641505
                 <br />
