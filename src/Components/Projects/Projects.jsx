@@ -12,8 +12,12 @@ const Projects = () => {
       <section className={Style.projectPage} id="projects">
         <div className={Style.subTitle}>Browse My Recent</div>
         <div className={Style.title}>Projects</div>
-        <div className={Style.projectSection}>
+        <div className={`${Style.projectSection} snaps-inline`}>
+            <ProjectCard />
             <ProjectCard/>
+            <ProjectCard/>
+            <ProjectCard/>
+            <ProjectCard />
             <ProjectCard/>
             <ProjectCard/>
             <ProjectCard/>

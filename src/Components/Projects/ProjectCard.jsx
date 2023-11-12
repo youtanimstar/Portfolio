@@ -6,7 +6,7 @@ import {FiExternalLink} from "react-icons/fi"
 
 const ProjectCard = () => {
   return (
-    <div className={Style.projectCard}>
+    <div className={`${Style.projectCard} project`}>
       <img src="coming_soon.jpg" alt="" />
       <h2 className={Style.projectTitle}>Project Name</h2>
       <div className={Style.buttonSection}>

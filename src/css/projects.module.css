@@ -1,77 +1,85 @@
 /* ========= section gap ========= */
-.projectPage{
-    margin-top: 70px;
-    padding-top: 50px;
+.projectPage {
+  margin-top: 70px;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
-.projectPage{
-    max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
+.projectPage {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
-.subTitle{
-    color: var(--gray);
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 500;
+.subTitle {
+  color: var(--gray);
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
-.title{
-    color: var(--black);
-    font-size: 50px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-[datatheme="dark"] .title{
-    color: var(--yellow);
+.title {
+  color: var(--black);
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
-.projectSection{
-    /* background-color: red; */
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 35px;
-    padding: 10px;
+[datatheme="dark"] .title {
+  color: var(--yellow);
 }
-.projectCard{
-    /* background-color: green; */
-    padding: 20px;
-    border: 1px solid var(--black);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-direction: column;
-    transition: all 300ms ease;
-    cursor: pointer;
 
+.projectSection {
+  width: 1100px;
+  margin-top: 50px;
+  padding: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
-.projectCard:hover{
-    transform: scale(1.02);
+.projectSection::-webkit-scrollbar {
+  display: none;
 }
-.projectCard img{
-    width: 300px;
-    border-radius: 20px;
-    border: 2px solid var(--black);
+.projectCard {
+  width: 350px;
+  padding: 20px;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  transition: all 300ms ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  margin-left: 20px;
+  scroll-snap-align: start;
 }
-.projectTitle{
-    font-size: 30px;
-    color: var(--black);
-    letter-spacing: 2px;
+.projectCard img {
+  width: 300px;
+  border-radius: 20px;
+  border: 2px solid var(--black);
 }
-.buttonSection{
-    /* background-color: red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.projectTitle {
+  font-size: 30px;
+  color: var(--black);
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+.buttonSection {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > .project {
+  scroll-snap-align: start;
 }
