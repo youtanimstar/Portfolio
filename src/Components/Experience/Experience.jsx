@@ -1,6 +1,9 @@
 import React from "react";
 import Style from "../../css/experience.module.css";
 import Language from "./Language";
+import Button from "../../css/button.module.css"
+import { FaArrowDown } from "react-icons/fa";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Experience = ({navRef}) => {
     
@@ -62,6 +65,7 @@ const Experience = ({navRef}) => {
             ))}
           </div>
         </div>
+        <Link to="#projects" className={`${Button.Next} ${Button.shakeVertical}`}><FaArrowDown className={Button.icon}/></Link>
       </section>
     </>
   );

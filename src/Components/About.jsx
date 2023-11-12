@@ -2,13 +2,16 @@ import React from "react";
 import Style from "../css/about.module.css";
 import { MdOutlineWork } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
+import Button from "../css/button.module.css"
+import { FaArrowDown } from "react-icons/fa";
+import { HashLink as Link } from "react-router-hash-link";
 const About = () => {
     
   return (
     <>
       <section className={Style.About} id="about">
         <div className={Style.top}>
-          <div className={Style.subTitle}>Get To Know More</div>
+          <div className={Style.subTitle}>Know More</div>
           <div className={Style.title}>About Me</div>
         </div>
         <div className={Style.bottom}>
@@ -34,14 +37,11 @@ const About = () => {
             </div>
             <div className={Style.aboutText}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+              reprehenderit et laborum
             </div>
           </div>
         </div>
+        <Link to="#experience" className={`${Button.Next} ${Button.shakeVertical}`}><FaArrowDown className={Button.icon}/></Link>
       </section>
     </>
   );
