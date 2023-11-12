@@ -1,6 +1,7 @@
 /* ========= section gap ========= */
 .projectPage{
     margin-top: 70px;
+    padding-top: 50px;
 }
 .projectPage{
     max-width: 1250px;
@@ -10,6 +11,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 .subTitle{
     color: var(--gray);

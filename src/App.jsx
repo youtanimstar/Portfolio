@@ -10,9 +10,8 @@ import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Socials from "./Components/Socials";
-// import { Link } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {BrowserRouter} from "react-router-dom";
+import ScrollPercentageIndicator from "./Components/ScrollPercentageIndicator";
 
 
 const App = () => {
@@ -22,24 +21,22 @@ const App = () => {
     <>
     <BrowserRouter>
       <div
-        className={Style.container}
+        className={`${Style.container} main`}
         datatheme={`${theme ? "dark" : "light"}`}
       >
-        {/* <Router> */}
-          <Navbar />
-          <Home/>
-          <About/>
-          <Experience/>
-          <Projects/>
-          <Contact/>
+          {/* <Navbar/> */}
+          <Home className="section"/>
+          <About className="section" />
+          <Experience className="section"/>
+          <Projects className="section"/>
+          <Contact className="section"/>
           <Footer />
           <Theme setTheme={setTheme} theme={theme} />
           <Socials />
-        {/* </Router> */}
+          <ScrollPercentageIndicator/>
       </div>
       </BrowserRouter>
     </>
   );
 };
-// ${theme?"dark":"light"}
 export default App;

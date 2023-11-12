@@ -5,6 +5,15 @@ import { MdEmail } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
 const Contact = () => {
+    const openWhatsApp = () => {
+      const phoneNumber = '8697641505';
+      const whatsappUrl = `https://wa.me/${phoneNumber}`;
+      window.open(whatsappUrl, '_blank');
+    };
+    const openGmail = () => {
+      const emailAddress = 'mailto:animdeep2019@gmail.com';
+      window.open(emailAddress, '_blank');
+    };
   return (
     <>
       <section className={Style.contactPage} id="contact">
@@ -12,7 +21,7 @@ const Contact = () => {
         <div className={Style.title}>Contact Me</div>
         <div className={Style.contactSection}>
           <div className={Style.left}>
-            <div className={Style.card}>
+            <div className={Style.card} onClick={openGmail}>
               <MdEmail className={Style.cardIcon} />
               <h2 className={Style.cardTitle}>Email Me</h2>
               <p className={Style.cardDescription}>
@@ -20,7 +29,7 @@ const Contact = () => {
                 <br />
               </p>
             </div>
-            <div className={Style.card}>
+            <div className={Style.card} onClick={openWhatsApp}>
               <PiPhoneCallFill className={Style.cardIcon} />
               <h2 className={Style.cardTitle}>Whatsapp Me</h2>
               <p className={Style.cardDescription}>

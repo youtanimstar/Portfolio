@@ -5,7 +5,9 @@ import Button from "../css/button.module.css";
 import {RiContactsLine} from "react-icons/ri"
 import {IoMdDownload} from "react-icons/io"
 import {HashLink as Link} from "react-router-hash-link"
+import { FaArrowDown } from "react-icons/fa";
 const Home = () => {
+ 
   return (
     <>
       <section className={Style.homeSection}>
@@ -28,7 +30,9 @@ const Home = () => {
             <Link className={`${Button.button}`} to="#contact">Contact Me<RiContactsLine className={Button.icon}/></Link>
           </div>
         </div>
+        <Link to="#about" className={`${Button.Next} ${Button.shakeVertical}`}><FaArrowDown className={Button.icon}/></Link>
       </section>
+
     </>
   );
 };

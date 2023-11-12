@@ -1,6 +1,6 @@
 /* ========= Top gap ========= */
 .homeSection{
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .homeSection{
@@ -12,6 +12,7 @@
     align-items: center;
     /* background-color: red; */
     gap: 60px;
+    position: relative;
 }
 .left img{
     width: 450px;
