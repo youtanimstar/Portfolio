@@ -12,6 +12,7 @@ import Footer from "./Components/Footer";
 import Socials from "./Components/Socials";
 import {BrowserRouter} from "react-router-dom";
 import ScrollPercentageIndicator from "./Components/ScrollPercentageIndicator";
+import DropNavbar from "./Components/DropNavbar/DropNavbar";
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         datatheme={`${theme ? "dark" : "light"}`}
       >
           {/* <Navbar/> */}
+          
           <Home className="section"/>
           <About className="section" />
           <Experience className="section"/>
@@ -34,6 +36,7 @@ const App = () => {
           <Theme setTheme={setTheme} theme={theme} />
           <Socials />
           <ScrollPercentageIndicator/>
+          <DropNavbar/>
       </div>
       </BrowserRouter>
     </>

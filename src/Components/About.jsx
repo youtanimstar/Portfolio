@@ -31,13 +31,12 @@ const About = () => {
                 <BsFillPeopleFill className={Style.cardIcon}/>
                 <h2 className={Style.cardTitle}>Education</h2>
                 <p className={Style.cardDescription}>
-                B.Sc. Bachelors Degree <br/>M.Sc. Masters Degree
+                I am currently pursuing a B.Tech degree at MSIT.
                 </p>
               </div>
             </div>
             <div className={Style.aboutText}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum
+            Hello! I'm Deep Das, a dedicated B.Tech student currently enrolled at MSIT. Beyond the academic rigors, I find my true passion in the dynamic world of frontend development. As a frontend developer, I thrive on the marriage of design and functionality, transforming lines of code into visually appealing and user-friendly interfaces.
             </div>
           </div>
         </div>

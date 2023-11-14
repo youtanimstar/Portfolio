@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Style from "../css/contact.module.css";
 import Button from "../css/button.module.css";
 import { MdEmail } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
+import emailjs from '@emailjs/browser';
 const Contact = () => {
     const openWhatsApp = () => {
       const phoneNumber = '8697641505';
@@ -14,6 +15,35 @@ const Contact = () => {
       const emailAddress = 'mailto:animdeep2019@gmail.com';
       window.open(emailAddress, '_blank');
     };
+
+    
+    const form = useRef();
+    
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      message: '',
+    });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_d6aywac', 'template_tpavvc7', form.current, 'slmehzitadfedhm1R')
+      .then((result) => {
+          console.log(result.text);
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+    console.log(formData);
+  };
+
   return (
     <>
       <section className={Style.contactPage} id="contact">
@@ -38,12 +68,13 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className={Style.right}>
+          <form className={Style.right} ref={form} onSubmit={sendEmail}>
             <input
               type="text"
               className={Style.input}
               placeholder="Your Name"
               name="name"
+              onChange={handleChange}
               required
             />
             <input
@@ -51,16 +82,19 @@ const Contact = () => {
               className={Style.input}
               placeholder="example@email.com"
               name="email"
+              onChange={handleChange}
               required
             />
             <textarea
               className={Style.textarea}
               placeholder="Your Message"
+              name="message"
+              onChange={handleChange}
             ></textarea>
             <div className={Style.buttonSection}>
-              <button className={Button.button}>Send <PiPaperPlaneRightFill className={Button.icon}/></button>
+              <button className={Button.button} type="submit">Send <PiPaperPlaneRightFill className={Button.icon}/></button>
             </div>
-          </div>
+          </form>
         </div>
       </section>
     </>

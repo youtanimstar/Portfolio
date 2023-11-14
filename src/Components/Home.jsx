@@ -10,7 +10,7 @@ const Home = () => {
  
   return (
     <>
-      <section className={Style.homeSection}>
+      <section className={Style.homeSection} id="home">
         <div className={Style.left}>
           <img src="deep_das_dark.png" alt="Deep Das pic" />
         </div>

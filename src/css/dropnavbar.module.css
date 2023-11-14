@@ -1,0 +1,84 @@
+.dropNavbar {
+  /* background-color: red; */
+  height: fit-content;
+  width: fit-content;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+.dropdownTrigger {
+  /* padding: 20px; */
+  height: 60px;
+  width: 60px;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.line {
+  width: 25px;
+  height: 2px;
+  background-color: var(--black);
+  border-radius: 50px;
+  transition: all 300ms ease;
+}
+.dropdownTrigger:hover {
+  background-color: var(--black);
+}
+.dropdownTrigger:hover .line {
+  background-color: var(--white);
+}
+.dropdownTrigger:hover .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.dropdownTrigger:hover .line:nth-child(2) {
+  transform: rotate(-45deg) translate(3.5px, -4px);
+}
+
+.dropdownMenu {
+  /* background-color: red; */
+  position: absolute;
+  top: 70px;
+  left: -150px;
+  border-radius: 10px;
+  border: 1px solid var(--black);
+  overflow: hidden;
+  background-color: var(--white);
+}
+.dropItem {
+  min-width: 210px;
+  padding: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 20px;
+  transition: all 300ms ease;
+}
+.dropItem:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.dropdownMenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 300ms ease;
+}
+
+.dropdownMenu.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 300ms ease;
+}
