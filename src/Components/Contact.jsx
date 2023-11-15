@@ -25,24 +25,18 @@ const Contact = () => {
       message: '',
     });
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_d6aywac', 'template_tpavvc7', form.current, 'slmehzitadfedhm1R')
-      .then((result) => {
-          console.log(result.text);
-          e.target.reset();
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-    console.log(formData);
   };
+
+  const sendEmail= (e)=>{
+    e.preventDefault();
+    console.log(formData);
+    e.target.reset();
+  }
 
   return (
     <>
