@@ -39,10 +39,23 @@ const Experience = ({navRef}) => {
       img: "express.png",
     },
     {
-      name: "PHP",
-      img: "php.png",
+      name: "Mongo DB",
+      img: "mongodb.png",
+    }
+  ];
+  const otherLanguageData = [
+    {
+      name: "C",
+      img: "c.png",
     },
-    
+    {
+      name: "C++",
+      img: "cpp.png",
+    },
+    {
+      name: "Python",
+      img: "python.png",
+    }
   ];
   return (
     <>
@@ -61,6 +74,14 @@ const Experience = ({navRef}) => {
           <h2 className={Style.cardTitle}>Backend Development</h2>
           <div className={Style.languageSection}>
             {backendLanguageData.map((item, index) => (
+              <Language key={index} name={item.name} img={item.img} />
+            ))}
+          </div>
+        </div>
+        <div className={Style.experienceCard}>
+          <h2 className={Style.cardTitle}>Other Languages</h2>
+          <div className={Style.languageSection}>
+            {otherLanguageData.map((item, index) => (
               <Language key={index} name={item.name} img={item.img} />
             ))}
           </div>
