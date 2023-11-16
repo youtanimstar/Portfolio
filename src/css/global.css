@@ -1,3 +1,4 @@
+
 .Typewriter__wrapper {
   color: var(--black);
   /* margin-left: 25px; */
@@ -48,7 +49,37 @@ html{
   overflow-y: scroll;
   transition: all 300ms ease;
 } */
-section{
+/* section{
   min-height: 100vh;
   scroll-snap-align: start;
-} 
+}  */
+
+
+@media only screen and (max-width: 1080px)
+{
+  .Typewriter__wrapper, .Typewriter__cursor{
+    font-size: 25px;
+  }
+
+}
+@media only screen and (max-width: 750px)
+{
+  .Typewriter__wrapper, .Typewriter__cursor{
+    font-size: 40px;
+  }
+
+}
+@media only screen and (max-width: 550px)
+{
+  .Typewriter__wrapper, .Typewriter__cursor{
+    font-size: 25px;
+  }
+
+}
+@media only screen and (max-width: 420px)
+{
+  .Typewriter__wrapper, .Typewriter__cursor{
+    font-size: 18px;
+  }
+
+}

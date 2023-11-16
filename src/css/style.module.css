@@ -23,6 +23,11 @@ html {
   transition: all 300ms ease;
   position: relative;
   z-index: 0;
+  margin-top: 0px;
+  /* padding-top: 100px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  /* background-color: red; */
 }
 
 :root{
@@ -37,4 +42,10 @@ html {
   --black: #ffffff;
   --gray-shadow: #ffffff17;
   --gray: #cfcfcf;
+}
+@media only screen and (max-width: 750px)
+{
+  .container{
+    padding-top: 80px;
+  }
 }

@@ -16,7 +16,6 @@ const Home = () => {
     a.click();
     document.body.removeChild(a);
   };
-
   return (
     <>
       <section className={Style.homeSection} id="home">
@@ -45,9 +44,9 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <Link to="#about" className={`${Button.Next} ${Button.shakeVertical}`}>
+        {/* <Link to="#about" className={`${Button.Next} ${Button.shakeVertical}`}>
           <FaArrowDown className={Button.icon} />
-        </Link>
+        </Link> */}
       </section>
     </>
   );

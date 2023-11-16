@@ -1,6 +1,7 @@
 /* ========= Top gap ========= */
 .homeSection{
     /* margin-top: 50px; */
+    padding-top: 100px;
 }
 
 .homeSection{
@@ -14,9 +15,13 @@
     gap: 60px;
     position: relative;
 }
+.left{
+    /* background-color: green; */
+}
 .left img{
     width: 450px;
     border-radius: 50%;
+    /* background-color: green; */
 }
 .right{
     /* background-color: green; */
@@ -26,6 +31,7 @@
     align-items: center;
     flex-direction: column;
     /* gap: 10px; */
+    /* background-color: yellow; */
 }
 .right .subTitle{
     color: var(--gray);
@@ -49,3 +55,120 @@
     gap: 25px;
     margin-top: 40px;
 }
+
+/* ========= Home ( RESPONSIVE ) ========= */
+
+/* Desktop view */
+
+@media only screen and (max-width: 1080px)
+{
+    .left img{
+        width: 300px;
+    }
+    .right .title{
+        font-size: 50px;
+    }
+    .right .subTitle{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 920px){
+    .homeSection{
+        gap: 30px;
+    }
+}
+@media only screen and (max-width: 890px){
+    .left img{
+        width: 250px;
+    }
+    .right .title{
+        font-size: 45px;
+    }
+    .right .subTitle{
+        font-size: 25px;
+    }
+    .right{
+        width: fit-content;
+    }
+}
+
+/* Mobile view */
+
+@media only screen and (max-width: 750px)
+{
+    .homeSection{
+        flex-direction: column-reverse;
+        gap: 100px;
+    }
+    .left img{
+        width: 450px;
+    }
+    .right .title{
+        font-size: 80px;
+    }
+    .right .subTitle{
+        font-size: 50px;
+    }
+    .right{
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    .right{
+        width: fit-content;
+    }
+}
+@media only screen and (max-width: 550px){
+    .right .title{
+        font-size: 70px;
+    }
+    .right .subTitle{
+        font-size: 40px;
+    }
+    .buttonSection{
+        flex-direction: column;
+    }
+    .left img{
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 420px){
+    .right .title{
+        font-size: 50px;
+    }
+    .right .subTitle{
+        font-size: 30px;
+    }
+    .left img{
+        width: 250px;
+    }
+    .homeSection{
+        gap: 60px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .right .title{
+        font-size: 45px;
+    }
+    .right .subTitle{
+        font-size: 25px;
+    }
+    .left img{
+        width: 200px;
+    }
+    .homeSection{
+        gap: 60px;
+    }
+}
+
+
+/* .homeSection{
+    background-color: red;
+}
+.right{
+    background: green;
+}
+.left{
+    background: orange;
+} */

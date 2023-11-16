@@ -40,7 +40,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <Link to="#experience" className={`${Button.Next} ${Button.shakeVertical}`}><FaArrowDown className={Button.icon}/></Link>
+        {/* <Link to="#experience" className={`${Button.Next} ${Button.shakeVertical}`}><FaArrowDown className={Button.icon}/></Link> */}
       </section>
     </>
   );

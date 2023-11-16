@@ -1,7 +1,7 @@
 /* ========= section gap ========= */
 .experience{
     margin-top: 70px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .experience{
     max-width: 1250px;
@@ -41,7 +41,8 @@
     padding: 30px;
     border-radius: 20px;
     /* border: 1px solid var(--black); */
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    /* background-color: red; */
     
 }
 .cardTitle{
