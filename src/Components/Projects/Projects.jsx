@@ -6,78 +6,45 @@ import { FaArrowDown } from "react-icons/fa";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaLessThan } from "react-icons/fa";
 import { FaGreaterThan } from "react-icons/fa";
+import Title from "../../css/title_subTitle.module.css"
+import {projectData} from "./ProjectData";
+
 
 const Projects = () => {
-
-  const projectData = [
-    {
-      name: "musichub",
-      img: "musichub.png",
-      github: "https://github.com/youtanimstar/music-hub",
-      demo: "https://music-hub-10.netlify.app/"
-    },
-    {
-      name: "hackerspace",
-      img: "hackerspace.png",
-      github: "https://github.com/youtanimstar/hackerspace",
-      demo: "https://codecraft-hackerspace.netlify.app/"
-    },
-    {
-      name: "passwordgenerator",
-      img: "passwordgenerator.png",
-      github: "https://github.com/youtanimstar/password-generator",
-      demo: "https://passwordgeneratoryoutanimstar.netlify.app/"
-    },
-    {
-      name: "mytodoapp",
-      img: "mytodoapp.png",
-      github: "https://github.com/youtanimstar/My-Todo-App",
-      demo: "https://youtanimstar.github.io/My-Todo-App/"
-    },
-    {
-      name: "hostinger",
-      img: "hostinger.png",
-      github: "https://github.com/youtanimstar/Hostinger",
-      demo: "https://hostingers.netlify.app/"
-    },
-    {
-      name: "calculator",
-      img: "calculator.png",
-      github: "https://github.com/youtanimstar/calculator",
-      demo: "https://starcalculator.netlify.app/"
-    },
-    {
-      name: "animatedbuttons",
-      img: "animatedbuttons.png",
-      github: "https://github.com/youtanimstar/animated-buttons",
-      demo: "https://animated-button-youtanimstar.netlify.app/"
-    },
-  ]
-
+  const projectSection = useRef();
   return (
     <>
       <section className={Style.projectPage} id="projects">
-        <div className={Style.subTitle}>Browse My Recent</div>
-        <div className={Style.title}>Projects</div>
+        {/* Title section */}
+        <div className={Title.subTitle}>Browse My Recent</div>
+        <div className={Title.title}>Projects</div>
+        {/* Project Section start */}
         <div className={Style.projectSectionWrap}>
-          <div className={`${Style.scrollButtonWrap} ${Style.left}`}>
+          {/* Left Scroll Button */}
+          <div className={`${Style.scrollButtonWrap} ${Style.left}`} onClick={()=>projectSection.current.scrollLeft -= 300}>
             <FaLessThan className={Style.scrollButton} />
           </div>
-          <div className={`${Style.scrollButtonWrap} ${Style.right}`} >
-            <FaGreaterThan className={Style.scrollButton} />
-          </div>
-          <div className={`${Style.projectSection} snaps-inline`}  >
+          
+          {/* Project Section Horizontal Scroll Section */}
+          <div className={`${Style.projectSection} snaps-inline`} ref={projectSection}  >
             {
+              // Project Section Card Loading section
               projectData.map((item, index)=><ProjectCard key={index} item={item}/>)
             }
           </div>
+          {/* Right Scroll Button */}
+          <div className={`${Style.scrollButtonWrap} ${Style.right}`} onClick={()=>projectSection.current.scrollLeft += 300}>
+            <FaGreaterThan className={Style.scrollButton} />
+          </div>
         </div>
-        <Link
+
+        {/* Others */}
+        {/* <Link
           to="#contact"
           className={`${Button.Next} ${Button.shakeVertical}`}
         >
           <FaArrowDown className={Button.icon} />
-        </Link>
+        </Link> */}
       </section>
     </>
   );

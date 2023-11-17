@@ -1,8 +1,8 @@
 /* ========= section gap ========= */
 .projectPage {
   margin-top: 70px;
-  padding-top: 50px;
-  padding-bottom: 150px;
+  padding-top: 30px;
+  /* padding-bottom: 150px; */
 }
 .projectPage {
   max-width: 1250px;
@@ -14,49 +14,39 @@
   flex-direction: column;
   position: relative;
 }
-.subTitle {
-  color: var(--gray);
-  font-size: 20px;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-.title {
-  color: var(--black);
-  font-size: 50px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-[datatheme="dark"] .title {
-  color: var(--yellow);
-}
 
 .projectSectionWrap{
-  padding: 20px;
+  /* padding: 20px; */
   margin-top: 50px;
   padding-top: 0px;
   padding-bottom: 0px;
-  /* background-color: green; */
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
 }
 
 .projectSection {
   width: 1100px;
   padding: 10px;
+  padding-right: 0px;
   overflow-x: auto;
   white-space: nowrap;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  /* background-color: red; */
+  scroll-behavior: smooth;
+  cursor:grab;
 }
 .projectSection::-webkit-scrollbar {
   display: none;
 }
 
 .scrollButtonWrap{
-  position: absolute;
-  top: 45%;
-  /* padding: 10px; */
+  /* position: absolute; */
+  /* top: 45%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,13 +72,13 @@
 .scrollButtonWrap:hover .scrollButton{
   color: var(--white);
 }
-.left{
-  left: -28px;
+/* .left{
+  left: -45px;
 
 }
 .right{
-  right: -20px;
-}
+  right: -40px;
+} */
 
 
 
@@ -117,7 +107,6 @@
   margin-top: 15px;
 }
 .buttonSection {
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,4 +121,124 @@
 
 .snaps-inline > .project {
   scroll-snap-align: start;
+}
+
+/* .projectPage{
+  background-color: red;
+}
+.projectSection{
+  background-color: green;
+}
+.projectSectionWrap{
+  background-color: blue;
+} */
+
+/* ========= Project Page ( RESPONSIVE ) ========= */
+@media only screen and (max-width: 1300px)
+{
+  .projectSection{
+    width: 720px;
+  }
+}
+@media only screen and (max-width: 1080px)
+{
+  .projectCard{
+    width: 300px;
+  }
+  .projectCard img{
+    width: 250px;
+  }
+  .projectSection{
+    width: 620px;
+  }
+}
+@media only screen and (max-width: 830px)
+{
+  .projectCard{
+    width: 350px;
+  }
+  .projectCard img{
+    width: 300px;
+  }
+  .projectSection{
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 675px)
+{
+  .projectSection{
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 575px)
+{
+  .projectSection{
+    max-width: 450px;
+  }
+}
+@media only screen and (max-width: 570px)
+{
+  .scrollButtonWrap{
+    display: none;
+  }
+  .projectSection{
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 530px)
+{
+  .projectSection{
+    max-width: 400px;
+  }
+  .projectCard{
+    width: 350px;
+  }
+  .projectCard img{
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 470px)
+{
+  .projectSection{
+    width: 350px;
+  }
+  .projectCard{
+    width: 280px;
+  }
+  .projectCard img{
+    width: 230px;
+  }
+  .buttonSection {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 430px)
+{
+  .projectSection{
+    width: 280px;
+  }
+}
+@media only screen and (max-width: 360px)
+{
+  .projectCard{
+    width: 250px;
+  }
+  .projectCard img{
+    width: 200px;
+  }
+  .projectSection{
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 310px)
+{
+  .projectCard{
+    width: 200px;
+  }
+  .projectCard img{
+    width: 150px;
+  }
+  .projectSection{
+    width: 200px;
+  }
 }
