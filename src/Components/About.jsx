@@ -5,14 +5,15 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import Button from "../css/button.module.css"
 import { FaArrowDown } from "react-icons/fa";
 import { HashLink as Link } from "react-router-hash-link";
+import Title from "../css/title_subTitle.module.css"
 const About = () => {
     
   return (
     <>
       <section className={Style.About} id="about">
         <div className={Style.top}>
-          <div className={Style.subTitle}>Know More</div>
-          <div className={Style.title}>About Me</div>
+          <div className={Title.subTitle}>Know More</div>
+          <div className={Title.title}>About Me</div>
         </div>
         <div className={Style.bottom}>
           <div className={Style.left}>

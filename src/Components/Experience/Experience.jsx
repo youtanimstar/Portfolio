@@ -4,6 +4,7 @@ import Language from "./Language";
 import Button from "../../css/button.module.css"
 import { FaArrowDown } from "react-icons/fa";
 import { HashLink as Link } from "react-router-hash-link";
+import Title from "../../css/title_subTitle.module.css";
 
 const Experience = ({navRef}) => {
     
@@ -60,8 +61,8 @@ const Experience = ({navRef}) => {
   return (
     <>
       <section className={Style.experience} id="experience">
-        <h2 className={Style.subTitle}>Explore My</h2>
-        <h1 className={Style.title}>Experience</h1>
+        <h2 className={Title.subTitle}>Explore My</h2>
+        <h1 className={Title.title}>Experience</h1>
         <div className={Style.experienceCard}>
           <h2 className={Style.cardTitle}>Frontend Development</h2>
           <div className={Style.languageSection}>
@@ -86,7 +87,7 @@ const Experience = ({navRef}) => {
             ))}
           </div>
         </div>
-        <Link to="#projects" className={`${Button.Next} ${Button.shakeVertical}`}><FaArrowDown className={Button.icon}/></Link>
+        {/* <Link to="#projects" className={`${Button.Next} ${Button.shakeVertical}`}><FaArrowDown className={Button.icon}/></Link> */}
       </section>
     </>
   );

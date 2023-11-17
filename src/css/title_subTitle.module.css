@@ -1,0 +1,62 @@
+.subTitle{
+    color: var(--gray);
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.title{
+    color: var(--black);
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+[datatheme="dark"] .title{
+    color: var(--yellow);
+}
+
+
+/* ========= Tile & Subtitle ( RESPONSIVE ) ========= */
+
+/* Mobile view */
+
+@media only screen and (max-width: 750px){
+    
+    .title{
+        font-size: 80px;
+    }
+    .subTitle{
+        font-size: 40px;
+    }
+    
+}
+@media only screen and (max-width: 550px)
+{
+    
+    .title{
+        font-size: 70px;
+    }
+    .subTitle{
+        font-size: 40px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 420px){
+    
+    .title{
+        font-size: 50px;
+    }
+    .subTitle{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 320px){
+    
+    .title{
+        font-size: 45px;
+    }
+    .subTitle{
+        font-size: 25px;
+    }
+}

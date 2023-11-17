@@ -1,127 +1,155 @@
 /* ========= section gap ========= */
-.experience{
-    margin-top: 70px;
-    padding-top: 30px;
+.experience {
+  margin-top: 70px;
+  padding-top: 30px;
 }
-.experience{
-    max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-    /* background-color: red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: all 300ms ease;
-    position: relative;
+.experience {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 300ms ease;
+  position: relative;
 }
-.subTitle{
-    color: var(--gray);
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 500;
+
+.experienceCard {
+  background-color: var(--white);
+  /* width: 1100px; */
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 50px;
+  /* border-radius: 20px; */
 }
-.title{
-    color: var(--black);
-    font-size: 50px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.cardTitle {
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--black);
 }
-[datatheme="dark"] .title{
-    color: var(--yellow);
+.languageSection {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
-.experienceCard{
-    background-color: var(--white);
-    width: 90%;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-    border-radius: 20px;
-    /* border: 1px solid var(--black); */
-    /* margin-top: 50px; */
-    /* background-color: red; */
-    
+.languageCard {
+  padding: 15px;
+  min-width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid var(--black);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
-.cardTitle{
-    font-size: 35px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: var(--black);
+.languageCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: var(--black);
+  transform: scale(0);
+  transition: all 400ms ease;
+  z-index: -1;
 }
-.languageSection{
-    /* background-color: red; */
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 25px;
+.languageCard:hover::after {
+  transform: scale(4);
 }
-.languageCard{
-    /* background-color: red; */
-    padding: 15px;
-    min-width: 180px;
+.languageCard img {
+  width: 100px;
+  transition: all 300ms ease;
+  transform: translateY(20px);
+}
+.name {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: var(--black);
+  transition: all 300ms ease;
+  transform: translateY(-50px);
+  visibility: hidden;
+  transition: all 300ms ease;
+  opacity: 0;
+}
+.languageCard:hover .name {
+  color: var(--white);
+}
+
+.languageCard:hover .name {
+  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
+}
+
+.languageCard:hover img {
+  transform: translateY(0px);
+}
+
+/* ========= Experience ( RESPONSIVE ) ========= */
+
+/* Desktop View */
+
+@media only screen and (max-width: 1080px) {
+  .languageCard img {
+    width: 80px;
+  }
+  .languageCard {
+    padding: 10px;
+    width: 130px;
     height: 180px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    border: 1px solid var(--black);
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    cursor: pointer;
-    transition: all 300ms ease;
+  }
+  .name{
+    font-size: 18px;
+  }
 }
-.languageCard::after{
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    background-color: var(--black);
-    /* background-color: red; */
-    transform: scale(0);
-    transition: all 400ms ease;
-    z-index: -1;
-}
-.languageCard:hover::after{
-    transform: scale(4);
-}
-.languageCard img{
-    width: 100px;
-    transition: all 300ms ease;
-    transform: translateY(20px);
-}
-.name{
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 800;
-    color: var(--black);
-    transition: all 300ms ease;
-    transform: translateY(-50px);
-   visibility: hidden;
-    transition: all 300ms ease;
-    opacity: 0;
-}
-.languageCard:hover .name{
-    color: var(--white);
+/* Mobile view */
+
+@media only screen and (max-width: 750px) {
+    .experienceCard {
+        align-items: center;
+        align-items: center;
+    }
+    .languageSection{
+        justify-content: center;
+    }
+  }
+@media only screen and (max-width: 590px)
+{
+    .cardTitle{
+        font-size: 25px;
+        text-align: center;
+    }
 }
 
-.languageCard:hover .name{
-    transform: translateY(0px);
-    visibility:visible;
-    opacity: 1;
 
+/* .experience {
+  background-color: blue;
 }
-
-.languageCard:hover img{
-    transform: translateY(0px);
+.experienceCard {
+  background-color: green;
 }
+.languageSection {
+  background-color: red;
+} */
