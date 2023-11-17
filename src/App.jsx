@@ -31,7 +31,7 @@ const App = () => {
           <About className="section" />
           <Experience className="section"/>
           <Projects className="section"/>
-          {/* <Contact className="section"/> */}
+          <Contact className="section"/>
           {/* <Footer /> */}
           {/* <Theme setTheme={setTheme} theme={theme} /> */}
           {/* <Socials /> */}

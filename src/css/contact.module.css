@@ -1,6 +1,7 @@
 /* ========= section gap ========= */
 .contactPage{
-    /* margin-top: 70px; */
+    margin-top: 70px;
+    padding-top: 30px;
 }
 .contactPage{
     max-width: 1250px;
@@ -27,7 +28,6 @@
     color: var(--yellow);
 }
 .contactSection{
-    /* background-color: red; */
     width: 100%;
     margin-top: 50px;
     display: flex;
@@ -36,20 +36,15 @@
     gap: 25px;
 }
 .left{
-    /* width: 30%; */
-    /* background-color: green; */
-    /* min-height: 500px; */
     display: flex;
     justify-content: start;
     align-items: start;
     gap: 25px;
     flex-direction: column;
-    /* padding: 10px; */
 }
 .card{
     height: 200px;
     width: 300px;
-    /* background-color: var(--white); */
     padding: 10px;
     border-radius: 20px;
     display: flex;
@@ -104,8 +99,7 @@
     color: var(--white);
 }
 .right{
-    /* background-color: red; */
-    width: 50%;
+    width: 625px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,8 +112,6 @@
     padding: 15px;
     font-size: 25px;
     border-radius: 20px;
-    /* margin-bottom: 30px; */
-    /* outline: none; */
     border: 1px solid var(--black);
     background-color: var(--white);
     color: var(--black);
@@ -134,10 +126,137 @@
     font-size: 25px;
     border-radius: 20px;
     outline: none;
-    /* margin-bottom: 30px; */
     background-color: var(--white);
     color: var(--black);
     font-family: "Poppins", sans-serif;
     letter-spacing: 2px;
     transition: all 300ms ease;
 }
+
+/* ========= Contact page ( RESPONSIVE ) ========= */
+/* Desktop view */
+
+
+@media only screen and (max-width: 1035px)
+{
+    .card{
+        width: 250px;
+    }
+    .right{
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 855px)
+{
+    .card{
+        width: 200px;
+    }
+    .right{
+        width: 450px;
+    }
+    .cardTitle{
+        font-size: 20px;
+    }
+    .cardDescription{
+        font-size: 12px;
+    }
+    .contactSection{
+        justify-content: center;
+        gap: 15px;
+    }
+    
+}
+/* Mobile View */
+
+@media only screen and (max-width: 750px){
+    .contactSection{
+        flex-direction: column;
+    }
+    .card{
+        width: 400px;
+        height: fit-content;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        gap: 25px;
+    }
+    .cardIcon{
+        font-size: 50px;
+    }
+    .cardTitle{
+        font-size: 40px;
+    }
+    .cardDescription{
+        font-size: 25px;
+    }
+    .right{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 495px){
+    .card{
+        width: 300px;
+        height: fit-content;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        gap: 25px;
+    }
+    .cardIcon{
+        font-size: 50px;
+    }
+    .cardTitle{
+        font-size: 35px;
+    }
+    .cardDescription{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 390px){
+    .card{
+        width: 250px;
+        height: fit-content;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        gap: 15px;
+    }
+    .cardIcon{
+        font-size: 40px;
+    }
+    .cardTitle{
+        font-size: 25px;
+    }
+    .cardDescription{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 311px){
+    .card{
+        width: 200px;
+        height: fit-content;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        gap: 15px;
+    }
+    .cardIcon{
+        font-size: 40px;
+    }
+    .cardTitle{
+        font-size: 25px;
+    }
+    .cardDescription{
+        font-size: 10px;
+    }
+}
+
+
+/* .contactPage{
+    background-color: red;
+}
+.contactSection{
+    background-color: green;
+}
+.left{
+    background-color: purple;
+}
+.right{
+    background-color: blue;
+} */

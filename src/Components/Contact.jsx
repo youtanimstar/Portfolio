@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
 import emailjs from '@emailjs/browser';
+import Title from "../css/title_subTitle.module.css"
 const Contact = () => {
     const openWhatsApp = () => {
       const phoneNumber = '8697641505';
@@ -41,8 +42,8 @@ const Contact = () => {
   return (
     <>
       <section className={Style.contactPage} id="contact">
-        <div className={Style.subTitle}>Get in Touch</div>
-        <div className={Style.title}>Contact Me</div>
+        <div className={Title.subTitle}>Get in Touch</div>
+        <div className={Title.title}>Contact Me</div>
         <div className={Style.contactSection}>
           <div className={Style.left}>
             <div className={Style.card} onClick={openGmail}>
