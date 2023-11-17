@@ -29,6 +29,10 @@ html {
   padding-right: 20px;
   /* background-color: red; */
 }
+/* @media only screen and (max-width: 750px)
+{
+
+} */
 
 :root{
   --white: white;
@@ -46,6 +50,6 @@ html {
 @media only screen and (max-width: 750px)
 {
   .container{
-    padding-top: 80px;
+    /* padding-top: 80px; */
   }
 }

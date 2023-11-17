@@ -13,6 +13,7 @@ import Socials from "./Components/Socials";
 import {BrowserRouter} from "react-router-dom";
 import ScrollPercentageIndicator from "./Components/ScrollPercentageIndicator";
 import DropNavbar from "./Components/DropNavbar/DropNavbar";
+import DropSocials from "./Components/Socials/DropSocials";
 
 
 const App = () => {
@@ -32,11 +33,12 @@ const App = () => {
           <Experience className="section"/>
           <Projects className="section"/>
           <Contact className="section"/>
-          {/* <Footer /> */}
-          {/* <Theme setTheme={setTheme} theme={theme} /> */}
+          <Footer />
+          <Theme setTheme={setTheme} theme={theme} />
           {/* <Socials /> */}
-          {/* <ScrollPercentageIndicator/> */}
+          <ScrollPercentageIndicator/>
           <DropNavbar/>
+          <DropSocials/>
       </div>
       </BrowserRouter>
     </>
