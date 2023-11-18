@@ -23,7 +23,7 @@ const DropNavbar = () => {
   return (
     <>
         <div className={Style.dropNavbar} ref={menuRef}>
-            <div className={Style.dropdownTrigger} onClick={()=>setOpen(!open)}>
+            <div className={`${Style.dropdownTrigger} ${open? Style.active:Style.inactive}`} onClick={()=>setOpen(!open)}>
                 <div className={Style.line}></div>
                 <div className={Style.line}></div>
             </div>

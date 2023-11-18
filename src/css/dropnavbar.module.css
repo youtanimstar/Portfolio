@@ -34,10 +34,10 @@
 .dropdownTrigger:hover .line {
   background-color: var(--white);
 }
-.dropdownTrigger:hover .line:nth-child(1) {
+.dropdownTrigger.active .line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-.dropdownTrigger:hover .line:nth-child(2) {
+.dropdownTrigger.active .line:nth-child(2) {
   transform: rotate(-45deg) translate(3.5px, -4px);
 }
 
