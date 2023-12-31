@@ -1,7 +1,6 @@
 /* ========= Top gap ========= */
 .homeSection{
-    /* margin-top: 50px; */
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .homeSection{
@@ -11,24 +10,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
     gap: 60px;
     position: relative;
 }
 .left img{
     width: 450px;
     border-radius: 50%;
-    /* background-color: green; */
 }
 .right{
-    /* background-color: green; */
     width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* gap: 10px; */
-    /* background-color: yellow; */
 }
 .right .subTitle{
     color: var(--gray);
@@ -41,7 +35,6 @@
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 2px;
-    /* background-color: red; */
 }
 [datatheme="dark"] .right .title{
     color: var(--yellow);
@@ -96,6 +89,7 @@
     .homeSection{
         flex-direction: column-reverse;
         gap: 100px;
+        padding-top: 100px;
     }
     .left img{
         width: 450px;
@@ -158,14 +152,3 @@
         gap: 60px;
     }
 }
-
-
-/* .homeSection{
-    background-color: red;
-}
-.right{
-    background: green;
-}
-.left{
-    background: orange;
-} */

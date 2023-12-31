@@ -2,7 +2,6 @@
 .projectPage {
   margin-top: 70px;
   padding-top: 30px;
-  /* padding-bottom: 150px; */
 }
 .projectPage {
   max-width: 1250px;
@@ -16,7 +15,6 @@
 }
 
 .projectSectionWrap{
-  /* padding: 20px; */
   margin-top: 50px;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -45,8 +43,6 @@
 }
 
 .scrollButtonWrap{
-  /* position: absolute; */
-  /* top: 45%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,16 +68,6 @@
 .scrollButtonWrap:hover .scrollButton{
   color: var(--white);
 }
-/* .left{
-  left: -45px;
-
-}
-.right{
-  right: -40px;
-} */
-
-
-
 
 .projectCard {
   width: 350px;
@@ -122,16 +108,6 @@
 .snaps-inline > .project {
   scroll-snap-align: start;
 }
-
-/* .projectPage{
-  background-color: red;
-}
-.projectSection{
-  background-color: green;
-}
-.projectSectionWrap{
-  background-color: blue;
-} */
 
 /* ========= Project Page ( RESPONSIVE ) ========= */
 @media only screen and (max-width: 1300px)

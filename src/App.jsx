@@ -9,7 +9,6 @@ import Experience from "./Components/Experience/Experience";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import Socials from "./Components/Socials";
 import {BrowserRouter} from "react-router-dom";
 import ScrollPercentageIndicator from "./Components/ScrollPercentageIndicator";
 import DropNavbar from "./Components/DropNavbar/DropNavbar";
@@ -22,12 +21,11 @@ const App = () => {
   return (
     <>
     <BrowserRouter>
+      <Navbar theme={theme}/>
       <div
         className={`${Style.container} main`}
         datatheme={`${theme ? "dark" : "light"}`}
       >
-          {/* <Navbar/> */}
-          
           <Home className="section"/>
           <About className="section" />
           <Experience className="section"/>
@@ -35,7 +33,6 @@ const App = () => {
           <Contact className="section"/>
           <Footer />
           <Theme setTheme={setTheme} theme={theme} />
-          {/* <Socials /> */}
           <ScrollPercentageIndicator/>
           <DropNavbar/>
           <DropSocials/>

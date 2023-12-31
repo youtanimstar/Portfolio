@@ -6,7 +6,6 @@
 
 .footerPage{
     background-color: var(--white);
-    /* height: 50px; */
     padding: 20px;
     width: 100%;
     border-top: 2px solid var(--black);

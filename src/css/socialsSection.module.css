@@ -1,5 +1,4 @@
 .dropNavbar {
-    /* background-color: red; */
     height: fit-content;
     width: fit-content;
     position: fixed;
@@ -7,7 +6,6 @@
     left: 30px;
   }
   .dropdownTrigger {
-    /* padding: 20px; */
     height: 60px;
     width: 60px;
     background-color: var(--white);
@@ -34,7 +32,6 @@
   }
   
   .dropdownMenu {
-    /* background-color: red; */
     position: absolute;
     bottom: 70px;
     right: -120px;
@@ -45,7 +42,6 @@
   }
   .dropItem {
     min-width: 180px;
-    /* width: fit-content; */
     padding: 10px;
     display: flex;
     justify-content: start;

@@ -2,6 +2,19 @@ a,
 .btn {
   transition: all 300ms ease;
 }
+:root{
+  --white: white;
+  --black: #000000;
+  --gray: #5a5a5a;
+  --gray-shadow: #00000017;
+  --yellow: #FABC58;
+}
+[datatheme="dark"]{
+  --white: #000000;
+  --black: #ffffff;
+  --gray-shadow: #ffffff17;
+  --gray: #cfcfcf;
+}
 
 nav,
 .navLinks {
@@ -9,10 +22,9 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 90px;
-  /* background-color: red; */
   box-shadow: 0px 10px 25px var(--gray-shadow);
   position: sticky;
   top: 0;
@@ -20,20 +32,20 @@ nav {
   background-color: var(--white);
   z-index: 1;
   transition: all 300ms ease;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .navLinks {
   gap: 20px;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 
 .navItems {
   color: var(--black);
   text-decoration: none;
-  /* text-decoration-color: var(--color); */
   padding: 10px;
-  /* background-color: red; */
   position: relative;
   transition: all 300ms ease;
 }
@@ -49,7 +61,6 @@ nav {
   bottom: 0;
   left: 50%;
   background-color: var(--black);
-  /* background-color: var(--yellow); */
   border-radius: 50px;
   transition: all 300ms ease;
 }
@@ -59,10 +70,7 @@ nav {
 .navItems:hover::after {
   width: 100%;
   left: 0%;
-  /* box-shadow: 0px -20px 30px var(--color); */
 }
-/* .navItems:hover {
-} */
 
 .logo {
   font-size: 2rem;
@@ -72,4 +80,24 @@ nav {
 
 .logo:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 900px)
+{
+  .navLinks {
+    gap: 10px;
+    font-size: 18px;
+  }
+  .navItems::after {
+    height: 2px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 750px)
+{
+  .nav{
+    display: none;
+  }
 }

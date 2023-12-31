@@ -23,7 +23,6 @@
   color: var(--white);
 }
 .button:hover .icon {
-  /* background-color: var(--black); */
   color: var(--white);
 }
 .icon {
@@ -32,8 +31,6 @@
   font-size: 25px;
   font-weight: 800;
   transition: all 300ms ease;
-  /* margin: 10px; */
-  /* margin-top: 10px; */
 }
 [datatheme="dark"] .button.special {
   color: var(--yellow);
@@ -48,7 +45,6 @@
 }
 
 [datatheme="dark"] .button.special:hover .icon {
-  /* background-color: var(--yellow); */
   color: var(--white);
 }
 .Next {
@@ -78,7 +74,6 @@
   color: var(--white);
 }
 .Next:hover .icon {
-  /* background-color: var(--black); */
   color: var(--white);
 }
 
